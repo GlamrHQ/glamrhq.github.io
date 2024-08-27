@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamr - Revolutionizing Fashion with Mixed Reality</title>
+    <meta name="description" content="Glamr is a cutting-edge mixed reality fashion app that offers virtual fitting rooms, infinite closets, and AI-powered wardrobe digitization.">
+    <meta name="keywords" content="Glamr, mixed reality, fashion, virtual fitting room, wardrobe digitization, AI styling">
+    <meta name="author" content="Glamr">
+    <meta property="og:title" content="Glamr - Revolutionizing Fashion with Mixed Reality">
+    <meta property="og:description" content="Experience the future of fashion with Glamr's mixed reality app featuring virtual fitting rooms and AI-powered styling.">
+    <meta property="og:image" content="https://yourdomain.com/path-to-your-glamr-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@GlamrHQ">
+    <link rel="canonical" href="https://yourdomain.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.halo.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00ff9d;
+            --secondary-color: #00d4ff;
+            --bg-color: #031b1a;
+            --text-color: #e0fff0;
+            --overlay-color: rgba(3, 27, 26, 0.7);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--overlay-color);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 6rem;
+            color: var(--primary-color);
+            text-shadow: 0 0 20px rgba(0, 255, 157, 0.7), 2px 2px 4px rgba(3, 27, 26, 0.8);
+            animation: glowPulse 2s ease-in-out infinite alternate;
+            letter-spacing: 0.1em;
+        }
+        @keyframes glowPulse {
+            from {
+                text-shadow: 0 0 20px rgba(0, 255, 157, 0.7), 2px 2px 4px rgba(3, 27, 26, 0.8);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(0, 255, 157, 0.9), 0 0 50px rgba(0, 255, 157, 0.7), 2px 2px 4px rgba(3, 27, 26, 0.8);
+            }
+        }
+        .tagline {
+            font-size: 1.8rem;
+            margin-top: 1rem;
+            color: var(--secondary-color);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(3, 27, 26, 0.8);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 4rem;
+        }
+        .feature {
+            flex-basis: calc(33.333% - 2rem);
+            margin: 1rem;
+            padding: 2rem;
+            background-color: rgba(0, 255, 157, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            position: relative;
+        }
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 157, 0.2) 0%, rgba(0, 255, 157, 0) 70%);
+            transform: scale(0);
+            transition: transform 0.5s ease-out;
+        }
+        .feature:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.4);
+        }
+        .feature:hover::before {
+            transform: scale(1);
+        }
+        .feature h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(3, 27, 26, 0.8);
+        }
+        .feature p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 1px rgba(3, 27, 26, 0.5);
+        }
+        .coming-soon {
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            color: var(--secondary-color);
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: floatText 3s ease-in-out infinite;
+            text-shadow: 2px 2px 4px rgba(3, 27, 26, 0.8);
+        }
+        @keyframes floatText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        #vanta-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            background-color: var(--overlay-color);
+            padding: 1rem;
+            border-radius: 50px;
+        }
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-5px) scale(1.1);
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4rem;
+            }
+            .feature {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="vanta-canvas"></div>
+    <div class="container">
+        <header>
+            <h1>Glamr</h1>
+            <p class="tagline">Empowering Fashion with Mixed Reality</p>
+        </header>
+        <div class="features">
+            <div class="feature">
+                <h2>Virtual Fitting Rooms</h2>
+                <p>Step into our AI-powered fitting rooms and experience personalized styling in a sustainable digital environment.</p>
+            </div>
+            <div class="feature">
+                <h2>Infinite Closets</h2>
+                <p>Blend your physical wardrobe with limitless digital fashion, reducing waste while expanding your style horizons.</p>
+            </div>
+            <div class="feature">
+                <h2>Wardrobe Digitization</h2>
+                <p>Transform your physical clothes into 3D digital assets, bridging the gap between traditional and futuristic fashion.</p>
+            </div>
+        </div>
+        <p class="coming-soon">Coming Soon to Quest Platform</p>
+        <div class="social-links">
+            <a href="https://instagram.com/GlamrHQ" target="_blank" aria-label="Follow Glamr on Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/GlamrHQ" target="_blank" aria-label="Follow Glamr on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com/GlamrHQ" target="_blank" aria-label="Subscribe to Glamr on YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/GlamrHQ" target="_blank" aria-label="Follow Glamr on GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <script>
+        VANTA.HALO({
+            el: "#vanta-canvas",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            baseColor: 0x031b1a,
+            backgroundColor: 0x031b1a,
+            amplitudeFactor: 2.00,
+            xOffset: 0.19,
+            yOffset: 0.10,
+            size: 1.50
+        })
+    </script>
+</body>
+</html>
