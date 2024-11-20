@@ -1,6 +1,6 @@
-import GithubIcon from "@/components/icons/github-icon";
 import LinkedInIcon from "@/components/icons/linkedin-icon";
 import XIcon from "@/components/icons/x-icon";
+import { FaInstagram } from "react-icons/fa6";
 import {
   Card,
   CardContent,
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+
 interface TeamProps {
   imageUrl: string;
   firstName: string;
@@ -17,158 +18,62 @@ interface TeamProps {
   positions: string[];
   socialNetworks: SocialNetworkProps[];
 }
+
 interface SocialNetworkProps {
   name: string;
   url: string;
 }
+
 export const TeamSection = () => {
   const teamList: TeamProps[] = [
     {
-      imageUrl: "https://i.pravatar.cc/250?img=58",
-      firstName: "Leo",
-      lastName: "Miranda",
-      positions: ["Vue Fronted Developer", "Creator Of This Website"],
+      imageUrl: "/team/rushabh.png",
+      firstName: "Rushabh",
+      lastName: "Chalke",
+      positions: ["Co-Founder", "Chief Executive Officer"],
       socialNetworks: [
         {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/leoMirandaa",
+          name: "Instagram",
+          url: "https://instagram.com/rushchalke",
         },
         {
           name: "X",
-          url: "https://x.com/leo_mirand4",
+          url: "https://x.com/rushchalke",
+        },
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/rushabhchalke/",
         },
       ],
     },
     {
-      imageUrl:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Elizabeth",
-      lastName: "Moore",
-      positions: ["UI/UX Designer"],
+      imageUrl: "/team/saurabh.png",
+      firstName: "Saurabh",
+      lastName: "Chalke",
+      positions: ["Co-Founder", "Chief Technology Officer"],
       socialNetworks: [
         {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+          name: "Instagram",
+          url: "https://instagram.com/saurabhchalke",
         },
         {
           name: "X",
-          url: "https://x.com/leo_mirand4",
+          url: "https://x.com/saurabhchalke",
         },
-      ],
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "David",
-      lastName: "Diaz",
-      positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
-      socialNetworks: [
         {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/leoMirandaa",
-        },
-      ],
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Sarah",
-      lastName: "Robinson",
-      positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
-      socialNetworks: [
-        {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/leoMirandaa",
-        },
-        {
-          name: "X",
-          url: "https://x.com/leo_mirand4",
-        },
-      ],
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Michael",
-      lastName: "Holland",
-      positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
-      socialNetworks: [
-        {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
-        },
-      ],
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Zoe",
-      lastName: "Garcia",
-      positions: ["JavaScript Evangelist", "Deno Champion"],
-      socialNetworks: [
-        {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/leoMirandaa",
-        },
-      ],
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Evan",
-      lastName: "James",
-      positions: ["Backend Developer"],
-      socialNetworks: [
-        {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/leoMirandaa",
-        },
-        {
-          name: "X",
-          url: "https://x.com/leo_mirand4",
-        },
-      ],
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Pam",
-      lastName: "Taylor",
-      positions: ["Fullstack Developer", "UX Researcher"],
-      socialNetworks: [
-        {
-          name: "X",
-          url: "https://x.com/leo_mirand4",
+          url: "https://www.linkedin.com/in/saurabhchalke/",
         },
       ],
     },
   ];
+
   const socialIcon = (socialName: string) => {
     switch (socialName) {
       case "LinkedIn":
         return <LinkedInIcon />;
-      case "Github":
-        return <GithubIcon />;
+      case "Instagram":
+        return <FaInstagram className="w-5 h-5" />;
       case "X":
         return <XIcon />;
     }
@@ -182,11 +87,11 @@ export const TeamSection = () => {
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold">
-          The Company Dream Team
+          Meet Our Team
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
         {teamList.map(
           (
             { imageUrl, firstName, lastName, positions, socialNetworks },
@@ -200,7 +105,7 @@ export const TeamSection = () => {
                 <div className="h-full overflow-hidden">
                   <Image
                     src={imageUrl}
-                    alt=""
+                    alt={`${firstName} ${lastName}`}
                     width={300}
                     height={300}
                     className="w-full aspect-square object-cover saturate-0 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]"

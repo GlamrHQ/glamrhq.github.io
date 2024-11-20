@@ -16,27 +16,35 @@ export const HeroSection = () => {
             <span className="mr-2 text-primary">
               <Badge>New</Badge>
             </span>
-            <span>Revolutionizing Fashion Shopping</span>
+            <span>Redefining Fashion Shopping</span>
           </Badge>
 
-          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
-            <h1>
-              Experience Fashion
-              <span className="text-transparent px-2 bg-gradient-to-r from-[#FF69B4] to-[#FF1493] bg-clip-text">
-                Like Never Before
-              </span>
+          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold space-y-4">
+            <h1 className="flex flex-col">
+              <div>
+                Experience <span className="text-transparent px-2 bg-gradient-to-r from-[#FF69B4] to-[#FF1493] bg-clip-text">
+                  Fashion
+                </span>
+              </div>
+              <div>
+                In <span className="text-transparent px-2 bg-gradient-to-r from-[#FF69B4] to-[#FF1493] bg-clip-text">
+                  Mixed Reality
+                </span>
+              </div>
             </h1>
           </div>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            Discover a new way to shop for sneakers and accessories with Glamr's immersive mixed reality platform. Try on products virtually, customize your style, and explore endless possibilities.
+            Discover a new way to shop for sneakers and accessories with Glamr&apos;s immersive mixed reality platform. Try on products virtually, customize your style, and explore endless possibilities.
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              Try Now
-              <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-            </Button>
+            <a href="https://discord.gg/3qB2ddG3" target="_blank">
+              <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
+                Join Waitlist
+                <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+                </Button>
+            </a>
 
             <Button
               asChild
@@ -53,12 +61,8 @@ export const HeroSection = () => {
           <Image
             width={1200}
             height={1200}
-            className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30"
-            src={
-              theme === "light"
-                ? "/hero-image-light.jpeg"
-                : "/hero-image-dark.jpeg"
-            }
+            className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center"
+            src="/hero.png"
             alt="dashboard"
           />
 

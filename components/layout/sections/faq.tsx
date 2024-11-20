@@ -13,32 +13,28 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
+    question: "What is Glamr?",
+    answer: "Glamr is a mixed reality platform that allows you to virtually try on sneakers and accessories, customize them, and make informed purchase decisions.",
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+    question: "How does the virtual try-on work?",
+    answer: "Using advanced mixed reality technology, our platform overlays digital images of products onto your real-world view, providing a realistic and interactive experience.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+    question: "Where can I try Glamr?",
+    answer: "You can experience Glamr at select retail partner locations. Check our store locator for a location near you.",
     value: "item-3",
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "Do I need any special equipment?",
+    answer: "Our in-store experiences are equipped with all the necessary hardware. Just visit a partner store and enjoy.",
     value: "item-4",
   },
   {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
+    question: "Is my personal information secure?",
+    answer: "Yes, we prioritize your privacy and use robust security measures to protect your data.",
     value: "item-5",
   },
 ];

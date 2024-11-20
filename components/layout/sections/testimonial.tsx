@@ -27,52 +27,44 @@ interface ReviewProps {
 const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe",
+    name: "PowerBoyYT",
     userName: "Product Manager",
     comment:
-      "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "Wow that’s so cool. I will definitely be checking it out when it comes out.",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
+    name: "24BitNoColor",
     userName: "Cybersecurity Analyst",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      "But the overall idea and implementation is very dope and I would 100% use this if my shoe seller / brand of choice would over this. Like literally every time I buy shoes.",
     rating: 4.8,
   },
 
   {
     image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
+    name: "klonkish",
     userName: "Chief Technology Officer",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "The lacing part is impressive!",
     rating: 4.9,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
+    name: "RuKo1998",
     userName: "Data Scientist",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "As a sneakerfan and VR user and enthusiast myself this is very cool!",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
+    name: "Dweplays",
     userName: "IT Project Manager",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
+      "Yes, just yes",
     rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    rating: 4.9,
   },
 ];
 
@@ -85,7 +77,7 @@ export const TestimonialSection = () => {
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          Hear What Our 1000+ Clients Say
+          Hear What Our Users Say
         </h2>
       </div>
 
@@ -103,13 +95,13 @@ export const TestimonialSection = () => {
             >
               <Card className="bg-muted/50 dark:bg-card">
                 <CardContent className="pt-6 pb-0">
-                  <div className="flex gap-1 pb-6">
+                  {/* <div className="flex gap-1 pb-6">
                     <Star className="size-4 fill-primary text-primary" />
                     <Star className="size-4 fill-primary text-primary" />
                     <Star className="size-4 fill-primary text-primary" />
                     <Star className="size-4 fill-primary text-primary" />
                     <Star className="size-4 fill-primary text-primary" />
-                  </div>
+                  </div> */}
                   {`"${review.comment}"`}
                 </CardContent>
 
@@ -125,7 +117,7 @@ export const TestimonialSection = () => {
 
                     <div className="flex flex-col">
                       <CardTitle className="text-lg">{review.name}</CardTitle>
-                      <CardDescription>{review.userName}</CardDescription>
+                      {/* <CardDescription>{review.userName}</CardDescription> */}
                     </div>
                   </div>
                 </CardHeader>
