@@ -64,7 +64,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/glamr-logo.jpg" />
+        <link rel="icon" type="image/jpg" href="/glamr-logo.jpg" />
+        <link rel="apple-touch-icon" href="/glamr-logo.jpg" />
       </head>
       <body className={cn("min-h-screen bg-background", inter.className)}>
         <ThemeProvider

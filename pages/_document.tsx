@@ -4,7 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="./glamr-logo.jpg" />
+        <link rel="icon" type="image/jpg" href="/glamr-logo.jpg" />
+        <link rel="apple-touch-icon" href="/glamr-logo.jpg" />
       </Head>
       <body>
         <Main />
