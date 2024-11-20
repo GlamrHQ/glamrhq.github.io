@@ -20,7 +20,7 @@ export const CommunitySection = () => {
                 <DiscordIcon />
                 <div>
                   Ready to join this
-                  <span className="text-transparent pl-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+                  <span className="text-transparent pl-2 bg-gradient-to-r from-[#FF69B4] to-[#FF1493] bg-clip-text">
                     Community?
                   </span>
                 </div>

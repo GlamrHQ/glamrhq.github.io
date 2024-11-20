@@ -10,40 +10,34 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "Glasses",
+    title: "Virtual Try-Ons",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Instantly see how sneakers and accessories look on you with our realistic mixed reality experience.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
+    icon: "Paintbrush",
+    title: "Interactive Customization",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Personalize colors, styles, and more in real-time to find the perfect match for your taste.",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
+    icon: "ShoppingBag",
+    title: "Wardrobe Integration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Mix and match new items with your existing wardrobe to create complete outfits.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
+    icon: "Shield",
+    title: "Product Authenticity",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Verify the originality of products using advanced machine learning techniques.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
+    icon: "Sparkles",
+    title: "Style Recommendations",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
-  },
-  {
-    icon: "Newspaper",
-    title: "Clear Headline",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Get personalized suggestions based on your preferences and current fashion trends.",
   },
 ];
 
