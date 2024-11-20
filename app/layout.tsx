@@ -33,13 +33,13 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   openGraph: {
     type: "website",
-    url: "https://glamr.com",
+    url: "https://[your-username].github.io/glamr",
     title: "Glamr - Mixed Reality Fashion Platform",
     description: "Experience the future of fashion shopping with Glamr's innovative mixed reality platform.",
     siteName: "Glamr",
     images: [
       {
-        url: "/glamr-logo.jpg",
+        url: "/glamr/glamr-logo.jpg",
         width: 1200,
         height: 630,
         alt: "Glamr - Mixed Reality Fashion Platform",
