@@ -24,7 +24,7 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "/glamr#features",
+    href: "#features",
     label: "Features",
   },
   {
